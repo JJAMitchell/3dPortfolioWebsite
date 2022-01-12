@@ -1,6 +1,5 @@
 import './style.css'
-import * as THREE from './node_modules/three/build/three.module.js';
-import {OrbitControls} from './node_modules/three/examples/jsm/controls/OrbitControls.js';
+import * as THREE from './node_modules/three';
 
 //Scene setup
 
@@ -47,8 +46,6 @@ scene.add(pointLight,ambientLight);
 const lightHelper = new THREE.PointLightHelper(pointLight);
 const gridHelper = new THREE.GridHelper(200,50);
 scene.add(lightHelper,gridHelper);
-
-const controls = new OrbitControls(camera,renderer.domElement);
 */
 
 //Star function
@@ -126,8 +123,6 @@ function animate(){
 
     moon.rotation.y+=0.005;
     moon.rotation.z+=0.002;
-
-    //controls.update();
 
     renderer.render(scene,camera);
 }
