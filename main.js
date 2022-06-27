@@ -16,17 +16,23 @@ renderer.render(scene,camera);
 
 //Torus's
 
-const geometry1 = new THREE.TorusGeometry(10,1,10,100);
-const material1 = new THREE.MeshStandardMaterial({color:0xFF6347});
-const torus1 = new THREE.Mesh(geometry1,material1);
+const torus1texture = new THREE.TextureLoader().load('torus1texture.png');
+
+const torus1 = new THREE.Mesh(
+	new THREE.TorusGeometry(10,1,10,100),
+	new THREE.MeshStandardMaterial({map:torus1texture})
+);
 
 torus1.position.set(2,0,-5);
 
 scene.add(torus1);
 
-const geometry2 = new THREE.TorusGeometry(13,1,10,100);
-const material2 = new THREE.MeshStandardMaterial({color:0xFF6347});
-const torus2 = new THREE.Mesh(geometry2,material2);
+const torus2texture = new THREE.TextureLoader().load('torus2texture.jpg');
+
+const torus2 = new THREE.Mesh(
+	new THREE.TorusGeometry(13,1,10,100),
+	new THREE.MeshStandardMaterial({map:torus2texture})
+);
 
 torus2.position.set(2,0,-5);
 
