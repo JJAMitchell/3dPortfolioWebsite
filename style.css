@@ -33,14 +33,8 @@ canvas{
     font-family: elevon, sans-serif;
     font-weight: 700;
     font-style: normal;
-	 word-wrap: break-word;
+	word-wrap: break-word;
   }
-  
-@media screen and (max-width: 1000px){
-	canvas{
-		display:none;
-	}
-}
   
     header {
       background: var(--dark-bg);
@@ -85,3 +79,20 @@ canvas{
     .left {
       grid-column: 6 / 12;
     }
+
+	
+  
+	@media screen and (max-width: 1000px){
+		canvas{
+			display:none;
+		}
+		header {
+			grid-column: 2;
+    	}
+		.left {
+      		grid-column: 2;
+    	}
+		 footer {
+      		grid-column: 2 / 3;
+    	}
+	}
